@@ -50,7 +50,9 @@ class _MyAppState extends State<MyApp> {
       RtcEngineEventHandler(
         onJoinChannelSuccess: (connection, elapsed) {
           print('User Joined');
-          _localUserJoined = true;
+          setState(() {
+            _localUserJoined = true;
+          });
         },
         onUserJoined: (RtcConnection connection, int remoteUid, int elapsed) {
           print("remote user $remoteUid joined");
@@ -69,7 +71,8 @@ class _MyAppState extends State<MyApp> {
         },
         onTokenPrivilegeWillExpire: (RtcConnection connection, String token) {
           print(
-              '[onTokenPrivilegeWillExpire] connection: ${connection.toJson()}, token: $token');
+            '[onTokenPrivilegeWillExpire] connection: ${connection.toJson()}, token: $token',
+          );
         },
       ),
     );
@@ -99,9 +102,10 @@ class _MyAppState extends State<MyApp> {
             ),
             Align(
               alignment: Alignment.topLeft,
-              child: SizedBox(
-                width: 100,
-                height: 100,
+              child: Container(
+                width: 150,
+                height: 200,
+                padding: const EdgeInsets.all(10.0),
                 child: Center(
                   child: _localUserJoined
                       ? AgoraVideoView(
