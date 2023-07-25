@@ -5,9 +5,9 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 
 const tempToken =
-    "007eJxTYAhN8tzY6NrebsScsIb56+TMM4vN/NP2LOrc91DBtOFfbokCg6F5applqoWpuXlamolRqolFsoWlkUVqSmqKoVGqYaqFpdOulIZARgbGXgEmIAmGID43Q0lqcYlzRmJeXmoOAwMA9XEhCQ==";
-const appId = "17ef9e8577ff42e48c8928eded12e1e8";
-const channelName = "testChannel";
+    "007eJxTYOD50/dUOb6ghjVjmcmMHaUuglGzpoX9DXzHI56y/E9Q90cFhjRzU4Nk0xQTkxRTAxNjS3ML40RT01RLA/Nk47S0NFPj9eX7UxoCGRkO/rjJwsgAgSC+AENaZlFxSUhqcYlzRmJeXmoOAwMA6m0lKA==";
+const appId = "f750c5d44d50439783a55e907c3fff53";
+const channelName = "firstTestChannel";
 
 void main() {
   runApp(
